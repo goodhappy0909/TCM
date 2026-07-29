@@ -2,6 +2,6 @@
 streamlit
 pandas
 numpy
-tensorflow
+tensorflow==2.20.0 # Use the specific version from your Colab notebook
 joblib
 scikit-learn # StandardScaler is from scikit-learn
