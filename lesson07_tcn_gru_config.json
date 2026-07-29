@@ -1,0 +1,42 @@
+{
+  "model_type": "Causal Conv1D + GRU",
+  "dataset": "UCI Steel Industry Energy Consumption",
+  "sensor_features": [
+    "usage_kwh",
+    "reactive_kvarh",
+    "power_factor_pct",
+    "hour_sin",
+    "hour_cos",
+    "dow_sin",
+    "dow_cos",
+    "is_weekday"
+  ],
+  "sequence_length": 96,
+  "data_frequency_minutes": 15,
+  "forecast_horizon_minutes": 15,
+  "split_method": "chronological_70_15_15",
+  "train_samples": 24460,
+  "validation_samples": 5242,
+  "test_samples": 5242,
+  "epochs_trained": 32,
+  "test_scores": {
+    "직전 값 기준선": {
+      "MAE_kWh": 5.013632297515869,
+      "RMSE_kWh": 11.61885482634093,
+      "R2": 0.8611740469932556
+    },
+    "전날 같은 시각": {
+      "MAE_kWh": 14.452844619750977,
+      "RMSE_kWh": 26.79571221055887,
+      "R2": 0.2616289258003235
+    },
+    "TCN-GRU": {
+      "MAE_kWh": 4.144418716430664,
+      "RMSE_kWh": 8.123748682940297,
+      "R2": 0.9321332573890686
+    }
+  },
+  "peak_cutoff_kwh": 69.15199279785156,
+  "peak_model_mae_kwh": 13.971277236938477,
+  "safety_note": "교육용 예측이며 실제 설비 제어와 절감 보장이 아닙니다."
+}
