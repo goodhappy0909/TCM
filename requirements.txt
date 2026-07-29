@@ -1,0 +1,7 @@
+%%writefile requirements.txt
+streamlit
+pandas
+numpy
+tensorflow
+joblib
+scikit-learn # StandardScaler is from scikit-learn
