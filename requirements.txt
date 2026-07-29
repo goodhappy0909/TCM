@@ -1,7 +1,7 @@
 %%writefile requirements.txt
 streamlit
 pandas
-numpy==1.24.3  # Specify a version compatible with tensorflow==2.20.0
-tensorflow==2.20.0
+numpy
+tensorflow==2.20.0 # Keep TensorFlow version pinned
 joblib
-scikit-learn==1.3.0 # Specify a version compatible with numpy
+scikit-learn
